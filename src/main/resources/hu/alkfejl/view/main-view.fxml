@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="hu.alkfejl.view.MainViewController">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Járművek">
+                    <items>
+                        <MenuItem text="Új jármű"
+                                  onAction="#openCreate"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TableView fx:id="table">
+
+            <columns>
+                <TableColumn fx:id="plateCol" text="Rendszám" prefWidth="150"/>
+                <TableColumn fx:id="categoryCol" text="Kategória" prefWidth="150"/>
+                <TableColumn fx:id="ageCol" text="Életkor" prefWidth="100"/>
+                <TableColumn fx:id="activeCol" text="Aktív" prefWidth="100"/>
+            </columns>
+
+        </TableView>
+    </center>
+
+</BorderPane>
